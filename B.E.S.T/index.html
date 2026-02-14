@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Happy Valentine's, Bestie 💘😂</title>
+    <style>
+      :root {
+        --paper: #fff7fb;
+        --ink: #111;
+        --pink: #ff4d8d;
+        --pink2: #ff89b4;
+        --shadow: 0 18px 50px rgba(0, 0, 0, 0.12);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        font-family:
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          Segoe UI,
+          Roboto,
+          Arial,
+          "Apple Color Emoji",
+          "Segoe UI Emoji";
+        background:
+          radial-gradient(
+            900px 500px at 20% 10%,
+            rgba(255, 77, 141, 0.25),
+            transparent 60%
+          ),
+          radial-gradient(
+            700px 500px at 80% 20%,
+            rgba(255, 137, 180, 0.25),
+            transparent 60%
+          ),
+          linear-gradient(180deg, var(--paper), #ffffff);
+        color: var(--ink);
+        padding: 24px;
+      }
+      .card {
+        width: min(720px, 100%);
+        background: rgba(255, 255, 255, 0.85);
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        border-radius: 18px;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+      header {
+        padding: 22px 22px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 12px;
+      }
+      .tag {
+        font-size: 12px;
+        padding: 8px 10px;
+        border-radius: 999px;
+        background: rgba(255, 77, 141, 0.12);
+        border: 1px solid rgba(255, 77, 141, 0.25);
+        color: #a80044;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+      h1 {
+        margin: 14px 22px 0;
+        font-size: clamp(28px, 4vw, 46px);
+        line-height: 1.05;
+      }
+      .sub {
+        margin: 10px 22px 0;
+        color: rgba(0, 0, 0, 0.65);
+        font-size: 16px;
+      }
+      .rule {
+        margin: 18px 22px 0;
+        height: 1px;
+        background: rgba(0, 0, 0, 0.08);
+      }
+      .content {
+        padding: 18px 22px 22px;
+        display: grid;
+        gap: 14px;
+      }
+      .box {
+        border-radius: 14px;
+        border: 1px dashed rgba(0, 0, 0, 0.18);
+        background: rgba(255, 77, 141, 0.06);
+        padding: 14px;
+      }
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+        justify-content: space-between;
+      }
+      button {
+        border: 0;
+        cursor: pointer;
+        padding: 12px 14px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, var(--pink), var(--pink2));
+        color: white;
+        font-weight: 700;
+        box-shadow: 0 10px 25px rgba(255, 77, 141, 0.25);
+        transition: transform 0.08s ease;
+      }
+      button:active {
+        transform: translateY(2px);
+      }
+      .pill {
+        display: inline-block;
+        padding: 8px 10px;
+        border-radius: 999px;
+        background: rgba(0, 0, 0, 0.06);
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        font-size: 13px;
+      }
+      .footer {
+        padding: 16px 22px 22px;
+        color: rgba(0, 0, 0, 0.55);
+        font-size: 13px;
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .hearts {
+        font-size: 20px;
+        letter-spacing: 6px;
+        user-select: none;
+        filter: drop-shadow(0 6px 12px rgba(255, 77, 141, 0.15));
+        animation: floaty 2.6s ease-in-out infinite;
+      }
+      @keyframes floaty {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-6px);
+        }
+      }
+      code {
+        font-family:
+          ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+          "Liberation Mono", "Courier New", monospace;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="card" role="main">
+      <header>
+        <div class="tag">Friendship Edition™</div>
+        <div class="hearts" aria-hidden="true">💘💘💘</div>
+      </header>
+
+      <h1>Happy Valentine’s, Bestie 🤝💖</h1>
+      <p class="sub">
+        This is a
+        <strong>friendship patch</strong> shipped straight to production.
+      </p>
+
+      <div class="rule"></div>
+
+      <section class="content">
+        <div class="box">
+          <div class="row">
+            <div>
+              <div class="pill">
+                Status: <strong id="status">stable</strong>
+              </div>
+              <div class="pill">
+                Mood: <strong id="mood">chaotic good</strong>
+              </div>
+            </div>
+            <button id="btn">Click for Friendship DLC 🎁</button>
+          </div>
+
+          <p id="msg" style="margin: 12px 0 0">
+            You have <strong>1</strong> (one) Valentine from your friend. Redeem
+            wisely.
+          </p>
+        </div>
+
+        <div class="box" style="background: rgba(0, 0, 0, 0.02)">
+          <p style="margin: 0 0 10px">
+            <strong>Friendship Terms & Conditions:</strong>
+          </p>
+          <ul style="margin: 0; padding-left: 18px; line-height: 1.55">
+            <li>First I hope your having fun and not at work today</li>
+            <li>Unlimited memes.</li>
+            <li>Emotional support (with occasional roasting).</li>
+            <li>Snacks are a shared resource.</li>
+            <li>If you’re sad, I will send a stupid video. Non-negotiable.</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <p style="margin: 0">
+            <strong>Commit Message Suggestion:</strong>
+            <br />
+            <code
+              >feat: deploy friendship valentines page ( just vibes) I hope you
+              were heavily loved on</code
+            >
+          </p>
+        </div>
+      </section>
+
+      <div class="footer">
+        <span>Made with 💖 + 20% flirting</span>
+        <span>Build: <strong>vday-friendship-1.0.0</strong></span>
+      </div>
+    </main>
+
+    <script>
+      const lines = [
+        "Friendship DLC unlocked: +10 laughs, +5 snacks, +1 dramatic story time.",
+        "You’re one of my favorite humans… YAAAAS. ✅",
+        "Valentine’s update: Still staying iconic. what about you, I need some tea",
+        "Patch notes: fixed sadness bug, improved meme performance.",
+        "This friendship is open-source. You can fork it, but you can’t replace me- That was good right? 😌",
+        "Achievement unlocked: ‘Bestie in Production’ 🏆",
+        "Reminder: you’re doing amazing. Now drink water before I send the hydration police, or open some other floodgate *wink* 🚓💧",
+      ];
+
+      const moods = [
+        "chaotic good",
+        "wholesome menace",
+        "certified bestie",
+        "unhinged but caring",
+      ];
+      const statuses = [
+        "stable",
+        "legendary",
+        "too powerful",
+        "approved by snacks",
+      ];
+
+      const msg = document.getElementById("msg");
+      const mood = document.getElementById("mood");
+      const status = document.getElementById("status");
+      const btn = document.getElementById("btn");
+
+      btn.addEventListener("click", () => {
+        const pick = lines[Math.floor(Math.random() * lines.length)];
+        const m = moods[Math.floor(Math.random() * moods.length)];
+        const s = statuses[Math.floor(Math.random() * statuses.length)];
+        msg.innerHTML = pick;
+        mood.textContent = m;
+        status.textContent = s;
+        btn.textContent = "Again 😭😂";
+      });
+    </script>
+  </body>
+</html>
